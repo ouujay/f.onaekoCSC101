@@ -1,19 +1,15 @@
 fn main()
 {
 
-    let loan:f64 = 520000000.0;
-    let rate:f64 = 10.0/100.0;
-    let time:f64 = 5.0;
-    let mut amount:f64 = 1.0+rate;
+    let x:f32 = 520000000.0;
+    let y:f32 = 10.0;
+    let z:f32 = 5.0;
+    /*simple interest*/
 
-    amount = 1.0 + f64::powf(amount,time);
-    //println!("{}",f64::powf(2.0,4.0));
-
-    amount = amount * loan;
-
-    let compound_interest:f64 = amount - loan;
-
-
-    println!("Amount: {}",compound_interest);
+   let P = x * (1.0+(y/100.0)) *z;
+   println!("Amount is {}", P);
+   //compound interest formula
+   let compoundinterest = P - x;
+    println!("Compound interest {}", compoundinterest);
 }
 
