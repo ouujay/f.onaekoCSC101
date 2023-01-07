@@ -1,12 +1,14 @@
 fn main() {
-    // using Vec::new()
-    let v : Vec<i64> = Vec::new();
+// mutable array
+let mut colors = ["red", "green","yellow","white"];
 
-    // printing the size of vector
-    println!("\n The length of vec::new is: {}",v.len());
-// using macro
-let v = vec!["Graec","effiong","Badil","Kareeem","Susan"];
+println!("\nOriginal array = {:?}", colors);
+// mutable slice
+let sliced_colors = &mut colors[0..3];
 
-// printing the size of vecter
-println!("\nThe length of vec macro is: {}",v.len());
+println!("First slice = {:?}", sliced_colors);
+
+// change the value of the original slice at the first index
+sliced_colors[0] = "purple";
+println!("Changed slice = {:?}", sliced_colors);
 }

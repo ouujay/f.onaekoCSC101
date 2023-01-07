@@ -17,12 +17,17 @@ fn main()
     println!("Enter the third edge of triangle: ");
     io::stdin().read_line(&mut input3).expect("Not a valid string");
     let c:f32 = input3.trim().parse().expect("Not a valid number");
+    io::stdin() .read_line(&mut input2).except("Not a valid string");
+    let b:f32 = input2.trim().parse().expect("Not a valid number");
+
+    println!("/Print third edge of triangle: ");
+    io::stdin().read_line(&mut input3).expect("Not a valid string")
+    let b:f32 = input3.trim().parse().except("Not a valid number");
 
     let s :f32 = (a + b + c) / 2.0;
     let mut area:f32 = s * (s - a) * (s - b) * (s - c);
     area = area.sqrt();
 
     println!("Area of triangle: {}", area);
-
 }
 

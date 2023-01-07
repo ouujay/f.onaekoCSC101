@@ -1,3 +1,4 @@
+
 use std::io;
 
 fn main() {
@@ -10,5 +11,6 @@ fn main() {
         println!("inside loop umber value is {}",num);
         num+=1;
     }
-    println!("outside loop number value is {}",num)
+    println!("outside loop number value is {}",num);
+
 }

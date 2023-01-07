@@ -1,4 +1,4 @@
-use std::io
+/*use std::io;
  
  fn main(){
     
@@ -8,11 +8,11 @@ use std::io
         2 murtaal afeez bandu
         3 okorocha calistus ogbona
         4 adewale jimoh akanbi
-        5 ozazuwa faith etiye")
+        5 ozazuwa faith etiye");
     let mut input1 = String::new();
-    println!("type the number assigned to the ministers name to get futher information")
+    println!("type the number assigned to the ministers name to get futher information");
       io::stdin().read_line(&mut input1).expect("not a valid string");
-      let input:i32 = input1.trim().parse().expect("Not a valid number");
+      let input1:i32 = input1.trim().parse().expect("Not a valid number");
 
       
     if input1 == 1{
@@ -35,21 +35,32 @@ use std::io
     }
   
    let mut input2 = String::new();
-   println!("do you want to check for another commissioner--- tuye y or n")
+   println!("do you want to check for another commissioner--- tuye y or n");
       io::stdin().read_line(&mut input2).expect("not a valid string");
      
-      if input2 == y {
+      if input2 == "y" {
         main();
       }
-      else if input2 == n {
+      else if input2 == "n" {
         println!("hope the information is useful & have a nice day");
-        break;
       }
+       break;
     }
 }
+*/
+use std::io::Write;                                                                                                                                                                  
+use std::io::prelude::*;                                                                                                                                                             
+use std::fs::File;    
+struct Particle {
+  x: f32,
+  y: f32,
+  z: f32,
+}
 
+let data = vec![    Particle { x: 1.0, y: 2.0, z: 3.0}  ];
 
+let mut f = File::create("output.vtk")? 
 
-
-
-
+for thing in &data {
+  write!(f, "{} {} {}", thing.x, thing.y, thing.z)?;
+}
